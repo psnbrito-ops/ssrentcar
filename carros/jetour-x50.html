@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Silvas & Santos | Rent a Car - JETOUR X50 - Galeria</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpg" href="../img/iconlogo.jpg">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header>
+    <a href="../index.html">
+      <img src="../img/logo.jpg" alt="Silvas & Santos Rent a Car" style="max-height:60px;">
+    </a>
+    <h1>Silvas & Santos Rent a Car</h1>
+  </header>
+  
+<!-- Modal Reserva - Design Moderno -->
+<dialog id="modalReserva" class="modal-novo">
+  <div class="modal-header">
+    <h2>🚗 Reserva Rápida</h2>
+    <button class="btn-fechar" onclick="modalReserva.close()" aria-label="Fechar">✖</button>
+  </div>
+  
+  <div class="modal-body">
+    <p class="modal-subtitulo">Preencha os dados abaixo e entraremos em contacto brevemente.</p>
+    
+    <form action="https://formspree.io/f/mlgzpdjw" method="POST" id="formReserva">
+      
+      <!-- Dados Pessoais -->
+      <fieldset class="grupo-campo">
+        <legend>👤 Dados Pessoais</legend>
+        
+        <div class="campo-row">
+          <div class="campo">
+            <label for="nome">Nome Completo *</label>
+            <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" required>
+          </div>
+          
+          <div class="campo">
+            <label for="carta_conducao">Nº Carta de Condução *</label>
+            <input type="text" id="carta_conducao" name="carta_conducao" placeholder="Ex: 123456789" required>
+          </div>
+        </div>
+        
+        <div class="campo">
+          <label for="data_carta">Data de Emissão da Carta *</label>
+          <input type="date" id="dataCarta" name="data_carta" required>
+          <span class="info-carta">ℹ️ Mínimo 2 anos de validade</span>
+          <p class="erro-carta" id="erroCarta">⚠️ A carta de condução deve ter pelo menos 2 anos de validade.</p>
+        </div>
+      </fieldset>
+
+      <!-- Contacto -->
+      <fieldset class="grupo-campo">
+        <legend>📞 Contacto</legend>
+        
+        <div class="campo-row">
+          <div class="campo">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="joao@email.com" required>
+          </div>
+          
+          <div class="campo">
+            <label for="telefone">Telefone *</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(+238) 999 99 99" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Detalhes da Reserva -->
+      <fieldset class="grupo-campo">
+        <legend>📅 Detalhes da Reserva</legend>
+        
+        <div class="campo-row">
+          <div class="campo">
+            <label for="data_levantamento">Data de Levantamento *</label>
+            <input type="date" id="data_levantamento" name="data_levantamento" required>
+          </div>
+          
+          <div class="campo">
+            <label for="data_devolucao">Data de Devolução *</label>
+            <input type="date" id="data_devolucao" name="data_devolucao" required>
+          </div>
+        </div>
+        
+        <div class="campo">
+          <label for="viatura">Viatura Pretendida</label>
+          <select id="viatura" name="viatura">
+            <option value="" disabled selected>Selecione uma viatura</option>
+            <option>Jetour X50</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- Mensagem -->
+      <div class="campo">
+        <label for="mensagem">Mensagem (opcional)</label>
+        <textarea id="mensagem" name="mensagem" rows="3" placeholder="Algum pedido especial?"></textarea>
+      </div>
+
+      <input type="hidden" name="_next" value="obrigado.html">
+      <input type="hidden" name="_subject" value="Nova Reserva - Silvas & Santos">
+      
+      <button type="submit" class="btn-enviar">
+        <span>📩 Enviar Reserva</span>
+      </button>
+    </form>
+  </div>
+</dialog>
+
+  <nav>
+    <a href="../index.html#sobre">Sobre Nós</a>
+    <a href="../index.html#carros">Carros</a>
+    <a href="../index.html#servicos">Serviços</a>
+    <a href="../index.html#contactos">Contactos</a>
+  </nav>
+
+  <section class="galeria-pagina">
+    <h2>JETOUR X50</h2>
+    <p class="subtitulo">O Jetour X50 é um SUV compacto moderno e urbano, projetado para oferecer estilo, tecnologia e conforto, destacando-se por um bom custo-benefício. Disponível com motores 1.5L aspirado ou 1.5L Turbo, oferece até 153 cv de potência, câmbio 6DCT, telas duplas de 10.25", câmera 360° e design sofisticado com bancos em couro.</p>
+
+    <img src="../img/carros/jetour-x50.jpg" alt="Jetour X50 - Vista frontal" class="imagem-destaque">
+
+    <div class="galeria-fotos">
+      <img src="../img/carros/jetour-x50-1.jpeg" alt="Jetour X50 - Foto 1" onclick="abrirLightbox(0)">
+      <img src="../img/carros/jetour-x50-2.jpeg" alt="Jetour X50 - Foto 2" onclick="abrirLightbox(1)">
+      <img src="../img/carros/jetour-x50-3.jpeg" alt="Jetour X50 - Foto 3" onclick="abrirLightbox(2)">
+      <img src="../img/carros/jetour-x50-4.jpeg" alt="Jetour X50 - Foto 4" onclick="abrirLightbox(3)">
+	  <img src="../img/carros/jetour-x50-5.jpeg" alt="Jetour X50 - Foto 5" onclick="abrirLightbox(4)">
+	  <img src="../img/carros/jetour-x50-6.jpeg" alt="Jetour X50 - Foto 6" onclick="abrirLightbox(5)">	
+	  <img src="../img/carros/jetour-x50-7.jpeg" alt="Jetour X50 - Foto 7" onclick="abrirLightbox(6)">	
+	  <img src="../img/carros/jetour-x50-8.jpeg" alt="Jetour X50 - Foto 8" onclick="abrirLightbox(7)">	
+	  <img src="../img/carros/jetour-x50-9.jpeg" alt="Jetour X50 - Foto 9" onclick="abrirLightbox(8)">	  
+	  <img src="../img/carros/jetour-x50-10.jpeg" alt="Jetour X50 - Interior" onclick="abrirLightbox(9)">	  	  
+	  <img src="../img/carros/jetour-x50-11.jpeg" alt="Jetour X50 - Interior" onclick="abrirLightbox(10)">	  	  
+	  <img src="../img/carros/jetour-x50-12.jpeg" alt="Jetour X50 - Interior" onclick="abrirLightbox(11)">
+    </div>
+
+    <div class="especificacoes">
+      <div class="espec-item">
+        <span>🚗</span>
+        <div><strong>Marca:</strong> Jetour</div>
+      </div>
+      <div class="espec-item">
+        <span>👥</span>
+        <div><strong>Lugares:</strong> 5</div>
+      </div>
+      <div class="espec-item">
+        <span>⚙️</span>
+        <div><strong>Caixa:</strong> Manual/Automático</div>
+      </div>
+      <div class="espec-item">
+        <span>❄️</span>
+        <div><strong>Ar condicionado:</strong> Sim</div>
+      </div>
+      <div class="espec-item">
+        <span>⛽</span>
+        <div><strong>Combustível:</strong> Gasolina</div>
+      </div>
+    </div>
+
+    <div class="preco-box" style="display:inline-block; margin:15px 0;">65 € / 6.500$00 / dia</div>
+    <p class="caucao"><strong>Caução de 200€</strong></p>
+
+    <div class="acoes-galeria">
+      <button class="btn" onclick="window.parent.modalReserva.showModal()">Reservar Agora</button>
+      <a href="../index.html#carros" class="btn-voltar">← Voltar ao Início</a>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="fecharLightbox(event)">
+    <span class="lightbox-fechar" onclick="fecharLightbox()">✖</span>
+    <span class="lightbox-nav lightbox-prev" onclick="mudarFoto(-1)">‹</span>
+    <img src="" alt="" id="lightbox-img">
+    <span class="lightbox-nav lightbox-next" onclick="mudarFoto(1)">›</span>
+  </div>
+
+  <footer>
+    © <strong>2025 Silvas & Santos | Rent a Car.</strong> Todos os direitos reservados.
+    • Desenvolvido por <strong><a href="https://paulobrito.netlify.app/" target="_blank" rel="noopener" style="color:#fff; text-decoration:none;">Paulo Brito</a></strong>
+  </footer>
+
+  <script>
+    const fotos = [
+      '../img/carros/jetour-x50-1.jpeg',
+      '../img/carros/jetour-x50-2.jpeg',
+      '../img/carros/jetour-x50-3.jpeg',
+      '../img/carros/jetour-x50-4.jpeg',
+      '../img/carros/jetour-x50-5.jpeg',	  
+      '../img/carros/jetour-x50-6.jpeg',	
+      '../img/carros/jetour-x50-7.jpeg',	
+      '../img/carros/jetour-x50-8.jpeg',	
+      '../img/carros/jetour-x50-9.jpeg',		  
+      '../img/carros/jetour-x50-10.jpeg',	
+      '../img/carros/jetour-x50-11.jpeg',			  	  
+      '../img/carros/jetour-x50-12.jpeg'
+    ];
+    let fotoAtual = 0;
+
+    function abrirLightbox(index) {
+      fotoAtual = index;
+      document.getElementById('lightbox-img').src = fotos[index];
+      document.getElementById('lightbox').classList.add('ativo');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function fecharLightbox(e) {
+      if (!e || e.target.id === 'lightbox' || e.target.classList.contains('lightbox-fechar')) {
+        document.getElementById('lightbox').classList.remove('ativo');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function mudarFoto(direcao) {
+      fotoAtual = (fotoAtual + direcao + fotos.length) % fotos.length;
+      document.getElementById('lightbox-img').src = fotos[fotoAtual];
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') fecharLightbox();
+      if (e.key === 'ArrowLeft') mudarFoto(-1);
+      if (e.key === 'ArrowRight') mudarFoto(1);
+    });
+
+  // Definir data máxima (hoje menos 2 anos)
+  const hoje = new Date();
+  const doisAnosAtras = new Date(hoje.getFullYear() - 2, hoje.getMonth(), hoje.getDate());
+  const dataMaxima = doisAnosAtras.toISOString().split('T')[0];
+  
+  document.getElementById('dataCarta').setAttribute('max', dataMaxima);
+
+  // Definir data mínima para levantamento (amanhã)
+  const amanha = new Date(hoje);
+  amanha.setDate(amanha.getDate() + 1);
+  document.getElementById('data_levantamento').setAttribute('min', amanha.toISOString().split('T')[0]);
+
+  // Atualizar min da devolução conforme levantamento
+  document.getElementById('data_levantamento').addEventListener('change', function() {
+    const dataLev = new Date(this.value);
+    dataLev.setDate(dataLev.getDate() + 1);
+    document.getElementById('data_devolucao').setAttribute('min', dataLev.toISOString().split('T')[0]);
+  });
+
+  // Validação no submit
+  document.getElementById('formReserva').addEventListener('submit', function(e) {
+    const dataCarta = new Date(document.getElementById('dataCarta').value);
+    const doisAnosAtras = new Date();
+    doisAnosAtras.setFullYear(doisAnosAtras.getFullYear() - 2);
+    
+    document.getElementById('erroCarta').style.display = 'none';
+    document.getElementById('dataCarta').classList.remove('erro');
+    
+    if (dataCarta > doisAnosAtras) {
+      e.preventDefault();
+      document.getElementById('erroCarta').style.display = 'block';
+      document.getElementById('dataCarta').classList.add('erro');
+      document.getElementById('dataCarta').focus();
+      return false;
+    }
+    
+    return true;
+  });
+
+  // Limpar erro ao alterar
+  document.getElementById('dataCarta').addEventListener('change', function() {
+    document.getElementById('erroCarta').style.display = 'none';
+    document.getElementById('dataCarta').classList.remove('erro');
+  });	
+
+  </script>
+
+</body>
+</html>
