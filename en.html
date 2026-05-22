@@ -14,28 +14,28 @@
     <h2>🚗 Quick Booking</h2>
     <button class="btn-fechar" onclick="modalReserva.close()" aria-label="Close">✖</button>
   </div>
-  
+
   <div class="modal-body">
     <p class="modal-subtitulo">Fill in the details below and we will contact you shortly.</p>
-    
+
     <form action="https://formspree.io/f/mlgzpdjw" method="POST" id="formReserva">
-      
+
       <!-- Personal Details -->
       <fieldset class="grupo-campo">
         <legend>👤 Personal Details</legend>
-        
+
         <div class="campo-row">
           <div class="campo">
             <label for="nome">Full Name *</label>
             <input type="text" id="nome" name="nome" placeholder="Ex: John Smith" required>
           </div>
-          
+
           <div class="campo">
             <label for="carta_conducao">Driver's License No. *</label>
             <input type="text" id="carta_conducao" name="carta_conducao" placeholder="Ex: 123456789" required>
           </div>
         </div>
-        
+
         <div class="campo">
           <label for="data_carta">Driver's License Issue Date *</label>
           <input type="date" id="dataCarta" name="data_carta" required>
@@ -47,13 +47,13 @@
       <!-- Contact -->
       <fieldset class="grupo-campo">
         <legend>📞 Contact</legend>
-        
+
         <div class="campo-row">
           <div class="campo">
             <label for="email">Email *</label>
             <input type="email" id="email" name="email" placeholder="john@email.com" required>
           </div>
-          
+
           <div class="campo">
             <label for="telefone">Phone *</label>
             <input type="tel" id="telefone" name="telefone" placeholder="(+238) 999 99 99" required>
@@ -64,19 +64,19 @@
       <!-- Booking Details -->
       <fieldset class="grupo-campo">
         <legend>📅 Booking Details</legend>
-        
+
         <div class="campo-row">
           <div class="campo">
             <label for="data_levantamento">Pick-up Date *</label>
             <input type="date" id="data_levantamento" name="data_levantamento" required>
           </div>
-          
+
           <div class="campo">
             <label for="data_devolucao">Return Date *</label>
             <input type="date" id="data_devolucao" name="data_devolucao" required>
           </div>
         </div>
-        
+
         <div class="campo">
           <label for="viatura">Preferred Vehicle</label>
           <select id="viatura" name="viatura">
@@ -96,7 +96,7 @@
 
       <input type="hidden" name="_next" value="obrigado.html">
       <input type="hidden" name="_subject" value="New Booking - Silvas & Santos">
-      
+
       <button type="submit" class="btn-enviar">
         <span>📩 Send Booking</span>
       </button>
@@ -127,353 +127,188 @@
     <a href="#servicos">Services</a>
     <a href="#contactos">Contact</a>
   </nav>
-  
-	<!-- Slider Promoções - Centrado com Zoom -->
-	<section id="promocoes" class="slider-centro">
-	  <div class="slider-centro-track" id="sliderTrack">
-		
-		<!-- Slide 1 -->
-		<div class="centro-item">
-		  <div class="centro-imagem zoom-container">
-			<img src="img/promo1.jpeg" alt="Promoção Silvas & Santos" onclick="abrirZoom(this.src)">
-			<div class="zoom-hint">🔍 Click for Zoom</div>
-		  </div>
-		</div>
 
-		<!-- Slide 2 -->
-		<div class="centro-item">
-		  <div class="centro-imagem zoom-container">
-			<img src="img/promo2.jpeg" alt="Promoção Jetour X70" onclick="abrirZoom(this.src)">
-			<div class="zoom-hint">🔍 Click for Zoom</div>
-		  </div>
-		</div>
-		
-		<!-- Slide 3 -->
-		<div class="centro-item">
-		  <div class="centro-imagem zoom-container">
-			<img src="img/promo3.jpeg" alt="Promoção Jetour X70" onclick="abrirZoom(this.src)">
-			<div class="zoom-hint">🔍 Click for Zoom</div>
-		  </div>
-		</div>		
+  <!-- Slider Promoções - Centrado com Zoom -->
+  <section id="promocoes" class="slider-centro">
+    <div class="slider-centro-track" id="sliderTrack">
 
-	  </div>
+      <!-- Slide 1 -->
+      <div class="centro-item">
+        <div class="centro-imagem zoom-container">
+          <img src="img/promo1.jpeg" alt="Promoção Silvas & Santos" onclick="abrirZoom(this.src)">
+          <div class="zoom-hint">🔍 Click for Zoom</div>
+        </div>
+      </div>
 
-	  <!-- Navegação - FORA do track, fixa no container -->
-	  <button class="centro-nav prev" id="btnPrev">‹</button>
-	  <button class="centro-nav next" id="btnNext">›</button>
-	  
-	  <!-- Botão reservar -->
-	  <div class="centro-acao">
-		<button class="btn-centro" onclick="modalReserva.showModal()">Booking Now →</button>
-	  </div>
-	</section>
+      <!-- Slide 2 -->
+      <div class="centro-item">
+        <div class="centro-imagem zoom-container">
+          <img src="img/promo2.jpeg" alt="Promoção Jetour X70" onclick="abrirZoom(this.src)">
+          <div class="zoom-hint">🔍 Click for Zoom</div>
+        </div>
+      </div>
 
-	<!-- Zoom Modal -->
-	<div class="zoom-modal" id="zoomModal" onclick="fecharZoom()">
-	  <span class="zoom-fechar">✖</span>
-	  <img src="" alt="Zoom" id="zoomImg">
-	</div>  
-
-	<section id="sobre">
-	  <h2>About Us</h2>
-	  <div class="sobre-wrapper">
-		<div class="sobre-texto">
-		  <p>
-			Silvas & Santos Rent a Car is a family-owned company specializing in car rental, recognized for its professionalism, trustworthiness, and personalized service. We work daily to provide our customers with a comfortable, safe, and worry-free mobility experience.
-		  </p>
-		  <p>		  
-			We have a modern, diverse, and rigorously maintained fleet, with solutions tailored to different profiles and needs — from economical vehicles for everyday use to SUVs ideal for travel, leisure, and adventure.		
-		  </p>
-		  <p>
-			Located in the heart of the tourist area of Santa Maria city, we offer excellent service, competitive prices, and close support at every stage of the rental process.
-		  </p>			
-		  <p>
-			At Silvas & Santos Rent a Car, our commitment is to ensure comfort, quality, and trust so that you can enjoy every moment of your journey with complete peace of mind.
-		  </p>
-		</div>
-
-		<div class="sobre-mosaico">
-		  <img src="img/Fachada.jpeg" alt="Fachada da Silvas & Santos Rent a Car" class="mosaico-grande">
-		  <div class="mosaico-pequenas">
-			<img src="img/Interior_1.jpeg" alt="Interior da loja Silvas & Santos Rent a Car">
-			<img src="img/Interior_2.jpeg" alt="Interior da loja Silvas & Santos Rent a Car">
-		  </div>
-		</div>
-	  </div>
-	</section>
-
-	<section id="carros">
-	  <h2>Available Cars</h2>
-	  <div class="carros-grid">		
-		<a href="carros/mahindra-en.html" class="carro-link">
-		  <div class="carro">
-			<div class="preco-box">50 € / 5,500$00</div>
-			<img src="img/carro3.png" alt="Mahindra">
-			<h3>MAHINDRA QUANTO C8</h3>
-			<p>5 seats | Manual | Diesel</p>
-			<p class="caucao"><strong>Deposit: 200€</strong></p>
-			<span class="ver-galeria">View gallery →</span>
-		  </div>
-		</a>
-
-		<a href="carros/jetour-x50-en.html" class="carro-link">
-		  <div class="carro">
-			<div class="preco-box">65 € / 6,500$00</div>
-			<img src="img/carro1.png" alt="Jetour X50">
-			<h3>JETOUR X50</h3>
-			<p>SUV | 5 seats | Manual/Automatic | Air conditioning</p>
-			<p class="caucao"><strong>Deposit: 200€</strong></p>
-			<span class="ver-galeria">View gallery →</span>
-		  </div>
-		</a>
-
-		<a href="carros/jetour-x70-en.html" class="carro-link">
-		  <div class="carro">
-			<div class="preco-box">85 € / 8,500$00</div>
-			<img src="img/carro2.png" alt="Jetour X70">
-			<h3>JETOUR X70</h3>
-			<p>SUV | 7 seats | Automatic | Air conditioning</p>
-			<p class="caucao"><strong>Deposit: 200€</strong></p>
-			<span class="ver-galeria">View gallery →</span>
-		  </div>
-		</a>
-	  </div>
-	</section>
-	  
-  <section id="servicos">
-	  <h2>Services</h2>
-	  <div class="servicos-grid">
-		<div class="servico-card">
-		  <h3>Short-Term Rental</h3>
-		  <p>Perfect for quick trips or weekends.</p>
-		</div>
-		<div class="servico-card">
-		  <h3>Long-Term Rental</h3>
-		  <p>For companies or extended stays.</p>
-		</div>
-		<div class="servico-card">
-		  <h3>Home Delivery</h3>
-		  <p>We bring the car to you.</p>
-		</div>
-		<div class="servico-card">
-		  <h3>Insurance Included</h3>
-		  <p>Total peace of mind during your trip.</p>
-		</div>
-	  </div>
-	  <button class="btn" onclick="modalReserva.showModal()">Book Now</button>
-  </section>  
-  
-  <section id="contactos">
-  <h2>Contact</h2>
-
-  <div class="contactos-wrapper">
-    <!-- Contact Info -->
-    <div class="info">
-      <p><strong>Phone:</strong> (+238) 592 30 87 / (+238) 987 80 21</p>
-      <p><strong>Email:</strong> reservas.silvassantos@gmail.com</p>
-      <p><strong>Address:</strong> Avenida dos Hotéis - DjadSal Moradias, Green Block, Santa Maria City</p>
+      <!-- Slide 3 -->
+      <div class="centro-item">
+        <div class="centro-imagem zoom-container">
+          <img src="img/promo3.jpeg" alt="Promoção Jetour X70" onclick="abrirZoom(this.src)">
+          <div class="zoom-hint">🔍 Click for Zoom</div>
+        </div>
+      </div>
     </div>
 
-    <!-- Social Media -->
-    <div class="redes">
-      <p><strong>Follow Us:</strong></p>
-      <a href="https://www.facebook.com/profile.php?id=61576450324001&mibextid=ZbWKwL" target="_blank" rel="noopener">
-        <img src="img/icon-facebook.WEBP" alt="Facebook" width="32" height="32">
-      </a>
-      <a href="https://www.instagram.com/p/DWbncuWCvOi/" target="_blank" rel="noopener">
-        <img src="img/icon-instagram.png" alt="Instagram" width="32" height="32">
-      </a>
-    </div>
-  </div>
+    <!-- Navegação - FORA do track, fixa no container -->
+    <button class="centro-nav prev" id="btnPrev">‹</button>
+    <button class="centro-nav next" id="btnNext">›</button>
 
- 	<h3>Our Location</h3>
-		<div class="mapa">
-			<iframe
-			  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1821.65612388737!2d-22.91555074192262!3d16.597707508095684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b5da2ef23ddc7%3A0xe8beda27eb2c674a!2sSilva%20%26%20Santos%20Rent%20a%20Car!5e1!3m2!1spt-PT!2scv!4v1768395357465!5m2!1spt-PT!2scv"
-			  width="100%"
-			  height="300"
-			  style="border:0;"
-			  allowfullscreen=""
-			  loading="lazy"
-			  referrerpolicy="no-referrer-when-downgrade">
-			</iframe>
-	  </div>
+    <!-- Botão reservar -->
+    <div class="centro-acao">
+      <button class="btn-centro" onclick="modalReserva.showModal()">Booking Now →</button>
+    </div>
   </section>
-  
-    <!-- WhatsApp Button -->
+
+  <!-- Zoom Modal -->
+  <div class="zoom-modal" id="zoomModal" onclick="fecharZoom()">
+    <span class="zoom-fechar">✖</span>
+    <img src="" alt="Zoom" id="zoomImg">
+  </div>  
+
+  <section id="sobre">
+    <h2>About Us</h2>
+    <div class="sobre-wrapper">
+      <div class="sobre-texto">
+        <p>
+          Silvas & Santos Rent a Car is a family-owned company specializing in car rental, recognized for its professionalism, trustworthiness, and personalized service. We work daily to provide our customers with a comfortable, safe, and worry-free mobility experience.
+        </p>
+        <p>		  
+          We have a modern, diverse, and rigorously maintained fleet, with solutions tailored to different profiles and needs — from economical vehicles for everyday use to SUVs ideal for travel, leisure, and adventure.		
+        </p>
+        <p>
+          Located in the heart of the tourist area of Santa Maria city, we offer excellent service, competitive prices, and close support at every stage of the rental process.
+        </p>			
+        <p>
+          At Silvas & Santos Rent a Car, our commitment is to ensure comfort, quality, and trust so that you can enjoy every moment of your journey with complete peace of mind.
+        </p>
+      </div>
+
+      <div class="sobre-mosaico">
+        <img src="img/Fachada.jpeg" alt="Fachada da Silvas & Santos Rent a Car" class="mosaico-grande">
+        <div class="mosaico-pequenas">
+          <img src="img/Interior_1.jpeg" alt="Interior da loja Silvas & Santos Rent a Car">
+          <img src="img/Interior_2.jpeg" alt="Interior da loja Silvas & Santos Rent a Car">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="carros">
+    <h2>Available Cars</h2>
+    <div class="carros-grid">		
+      <a href="carros/mahindra-en.html" class="carro-link">
+        <div class="carro">
+          <div class="preco-box">50 € / 5,500$00</div>
+          <img src="img/carro3.png" alt="Mahindra">
+          <h3>MAHINDRA QUANTO C8</h3>
+          <p>5 seats | Manual | Diesel</p>
+          <p class="caucao"><strong>Deposit: 200€</strong></p>
+          <span class="ver-galeria">View gallery →</span>
+        </div>
+      </a>
+
+      <a href="carros/jetour-x50-en.html" class="carro-link">
+        <div class="carro">
+          <div class="preco-box">65 € / 6,500$00</div>
+          <img src="img/carro1.png" alt="Jetour X50">
+          <h3>JETOUR X50</h3>
+          <p>SUV | 5 seats | Manual/Automatic | Air conditioning</p>
+          <p class="caucao"><strong>Deposit: 200€</strong></p>
+          <span class="ver-galeria">View gallery →</span>
+        </div>
+      </a>
+
+      <a href="carros/jetour-x70-en.html" class="carro-link">
+        <div class="carro">
+          <div class="preco-box">85 € / 8,500$00</div>
+          <img src="img/carro2.png" alt="Jetour X70">
+          <h3>JETOUR X70</h3>
+          <p>SUV | 7 seats | Automatic | Air conditioning</p>
+          <p class="caucao"><strong>Deposit: 200€</strong></p>
+          <span class="ver-galeria">View gallery →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <h2>Services</h2>
+    <div class="servicos-grid">
+      <div class="servico-card">
+        <h3>Short-Term Rental</h3>
+        <p>Perfect for quick trips or weekends.</p>
+      </div>
+      <div class="servico-card">
+        <h3>Long-Term Rental</h3>
+        <p>For companies or extended stays.</p>
+      </div>
+      <div class="servico-card">
+        <h3>Home Delivery</h3>
+        <p>We bring the car to you.</p>
+      </div>
+      <div class="servico-card">
+        <h3>Insurance Included</h3>
+        <p>Total peace of mind during your trip.</p>
+      </div>
+    </div>
+    <button class="btn" onclick="modalReserva.showModal()">Book Now</button>
+  </section>  
+
+  <section id="contactos">
+    <h2>Contact</h2>
+
+    <div class="contactos-wrapper">
+      <!-- Contact Info -->
+      <div class="info">
+        <p><strong>Phone:</strong> (+238) 592 30 87 / (+238) 987 80 21</p>
+        <p><strong>Email:</strong> reservas.silvassantos@gmail.com</p>
+        <p><strong>Address:</strong> Avenida dos Hotéis - DjadSal Moradias, Green Block, Santa Maria City</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="redes">
+        <p><strong>Follow Us:</strong></p>
+        <a href="https://www.facebook.com/profile.php?id=61576450324001&mibextid=ZbWKwL" target="_blank" rel="noopener">
+          <img src="img/icon-facebook.WEBP" alt="Facebook" width="32" height="32">
+        </a>
+        <a href="https://www.instagram.com/p/DWbncuWCvOi/" target="_blank" rel="noopener">
+          <img src="img/icon-instagram.png" alt="Instagram" width="32" height="32">
+        </a>
+      </div>
+    </div>
+
+    <h3>Our Location</h3>
+    <div class="mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1821.65612388737!2d-22.91555074192262!3d16.597707508095684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b5da2ef23ddc7%3A0xe8beda27eb2c674a!2sSilva%20%26%20Santos%20Rent%20a%20Car!5e1!3m2!1spt-PT!2scv!4v1768395357465!5m2!1spt-PT!2scv"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- WhatsApp Button -->
   <a href="https://wa.me/2385923087" class="whatsapp-btn" target="_blank" title="Chat with us on WhatsApp">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
-  
+
   <footer>
-	© <strong>2025 Silvas & Santos | Rent a Car.</strong> All rights reserved.
-	• Developed by <strong><a href="https://paulobrito.netlify.app/" target="_blank" rel="noopener" style="color:#fff; text-decoration:none;">Paulo Brito</a></strong>		
+    © <strong>2025 Silvas & Santos | Rent a Car.</strong> All rights reserved.
+    • Developed by <strong><a href="https://paulobrito.netlify.app/" target="_blank" rel="noopener" style="color:#fff; text-decoration:none;">Paulo Brito</a></strong>		
   </footer>
-  
-<script> 
-  // Set max date (today minus 2 years)
-  const hoje = new Date();
-  const doisAnosAtras = new Date(hoje.getFullYear() - 2, hoje.getMonth(), hoje.getDate());
-  const dataMaxima = doisAnosAtras.toISOString().split('T')[0];
-  
-  document.getElementById('dataCarta').setAttribute('max', dataMaxima);
 
-  // Set min pick-up date (tomorrow)
-  const amanha = new Date(hoje);
-  amanha.setDate(amanha.getDate() + 1);
-  document.getElementById('data_levantamento').setAttribute('min', amanha.toISOString().split('T')[0]);
-
-  // Update return date min based on pick-up
-  document.getElementById('data_levantamento').addEventListener('change', function() {
-    const dataLev = new Date(this.value);
-    dataLev.setDate(dataLev.getDate() + 1);
-    document.getElementById('data_devolucao').setAttribute('min', dataLev.toISOString().split('T')[0]);
-  });
-
-  // Form validation on submit
-  document.getElementById('formReserva').addEventListener('submit', function(e) {
-    const dataCarta = new Date(document.getElementById('dataCarta').value);
-    const doisAnosAtras = new Date();
-    doisAnosAtras.setFullYear(doisAnosAtras.getFullYear() - 2);
-    
-    document.getElementById('erroCarta').style.display = 'none';
-    document.getElementById('dataCarta').classList.remove('erro');
-    
-    if (dataCarta > doisAnosAtras) {
-      e.preventDefault();
-      document.getElementById('erroCarta').style.display = 'block';
-      document.getElementById('dataCarta').classList.add('erro');
-      document.getElementById('dataCarta').focus();
-      return false;
-    }
-    
-    return true;
-  });
-
-  // Clear error on change
-  document.getElementById('dataCarta').addEventListener('change', function() {
-    document.getElementById('erroCarta').style.display = 'none';
-    document.getElementById('dataCarta').classList.remove('erro');
-  }); 
-  
-  // ========== SLIDER ==========
-  let slideAtual = 0;
-  const track = document.getElementById('sliderTrack');
-  const dots = document.querySelectorAll('.dot-centro');
-  const btnPrev = document.getElementById('btnPrev');
-  const btnNext = document.getElementById('btnNext');
-  const totalSlides = 3;
-  let autoSlide;
-
-  function atualizarSlide() {
-    if (!track) return;
-    track.style.transform = `translateX(-${slideAtual * 100}%)`;
-    
-    dots.forEach((d, i) => {
-      d.classList.toggle('ativo', i === slideAtual);
-    });
-  }
-
-  function moverSlide(direcao) {
-    slideAtual += direcao;
-    if (slideAtual >= totalSlides) slideAtual = 0;
-    if (slideAtual < 0) slideAtual = totalSlides - 1;
-    atualizarSlide();
-    resetAuto();
-  }
-
-  function irParaSlide(index) {
-    slideAtual = parseInt(index);
-    atualizarSlide();
-    resetAuto();
-  }
-
-  function autoPlay() {
-    autoSlide = setInterval(() => moverSlide(1), 5000);
-  }
-
-  function resetAuto() {
-    clearInterval(autoSlide);
-    autoPlay();
-  }
-
-  // Event listeners - BOTOES
-  if (btnPrev) {
-    btnPrev.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      moverSlide(-1);
-    });
-  }
-
-  if (btnNext) {
-    btnNext.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      moverSlide(1);
-    });
-  }
-
-  // Event listeners - DOTS
-  dots.forEach(dot => {
-    dot.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      const index = this.getAttribute('data-slide');
-      irParaSlide(index);
-    });
-  });
-
-  // Iniciar
-  atualizarSlide();
-  autoPlay();
-
-  // Pausar ao hover
-  const slider = document.querySelector('.slider-centro');
-  if (slider) {
-    slider.addEventListener('mouseenter', () => clearInterval(autoSlide));
-    slider.addEventListener('mouseleave', autoPlay);
-  }
-
-  // Touch/Swipe
-  let touchStartX = 0;
-  if (track) {
-    track.addEventListener('touchstart', e => {
-      touchStartX = e.changedTouches[0].screenX;
-    }, {passive: true});
-
-    track.addEventListener('touchend', e => {
-      const diff = touchStartX - e.changedTouches[0].screenX;
-      if (Math.abs(diff) > 50) {
-        diff > 0 ? moverSlide(1) : moverSlide(-1);
-      }
-    }, {passive: true});
-  }
-
-  // ========== ZOOM ==========
-  const zoomModal = document.getElementById('zoomModal');
-  const zoomImg = document.getElementById('zoomImg');
-
-  function abrirZoom(src) {
-    if (!zoomModal || !zoomImg) return;
-    zoomImg.src = src;
-    zoomModal.classList.add('ativo');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function fecharZoom() {
-    if (!zoomModal) return;
-    zoomModal.classList.remove('ativo');
-    document.body.style.overflow = '';
-  }
-
-  // Fechar com ESC
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && zoomModal.classList.contains('ativo')) {
-      fecharZoom();
-    }
-  });
-  
-</script>
+  <script src="js/main.js"></script>
 </body>
 </html>
